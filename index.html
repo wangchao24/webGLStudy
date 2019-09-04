@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        html,body{ margin: 0;padding:0;width:100%;height:100% }
+        canvas{height:100%;width:100%};
+    </style>
+   <link rel="stylesheet" href="./lib/main.css">
+    <script src='./lib/three.js'></script>
+    <script src = './lib/gifloader.js'></script>
+    <script src = './lib/dat.gui.min.js'></script>
+    <script src = './lib/OrbitControls.js'></script>
+    <style> 
+         #aa {
+             height:100px;
+             width:100px;
+             background: red;
+         }
+         #aa:hover {
+             background: yellow;
+         }
+         /* .aa:active {
+             background: blue;
+         } */
+    </style>
+</head>
+<body ontouchstart='' ontouchend=''>
+    <div id='aa'></div>
+</body>
+<script src = './index.js'></script>
+</html>
+<script>
+    let time = 0;
+      document.getElementById('aa').onclick = function(e){
+            console.log(e);
+      }
+      document.getElementById('aa').ontouchstart = function(e){
+            setTimeout(()=>{
+                time = 2;
+            },1000)
+            console.log("start");
+      }
+      document.getElementById('aa').ontouchmove = function(e){
+            console.log("move");
+      }
+      document.getElementById('aa').ontouchend = function(e){
+          console.log(time)
+        console.log("end");
+      }
+      
+    //   document.getElementById('aa').addEventListener('touchsrart',(e)=>{
+    //       console.log(e);
+    //   })
+
+</script>
